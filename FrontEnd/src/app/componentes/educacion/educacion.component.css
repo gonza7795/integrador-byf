@@ -12,3 +12,28 @@ h1, h3 {
     display: inline;
 }
 
+
+
+
+@media (min-width: 576px) {
+    #logoutn {
+        
+        width: 120%;
+        border-radius: 100%;
+        box-shadow: 5px 5px 5px grey;
+        left: 3%;
+        top: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    #logoutn {
+        
+        width: 20%;
+        border-radius: 100%;
+        box-shadow: 5px 5px 5px grey;
+        left: 33%;
+        top: 600px;
+    }
+}
+
