@@ -5,6 +5,7 @@ import com.portfolio.Gonzalo.Entity.Persona;
 import com.portfolio.Gonzalo.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+
+//esto es para que no de error cuando llama a la variable
+@CrossOrigin(origins = "http://localhost:4200")
 
 
 public class PersonaController {
@@ -54,6 +58,8 @@ public class PersonaController {
     
     // ASI SERIA LA URL
     //URL:PUERTO/personas/editar/{id}/nombre & apellido & IMG
+    //ejemplo
+    // localhost:8080/personas/editar/1?nombre=Zlatan&apellido=Imbraimovich&img=otroURL
     public Persona editPersona(@PathVariable Long id,
        @RequestParam("nombre") String nuevoNombre,
             @RequestParam("apellido") String nuevoApellido, 
@@ -67,6 +73,14 @@ public class PersonaController {
       return persona;
       
     } 
+    
+    
+    @GetMapping("/personas/traer/perfil")
+    public Persona findPersona()  {
+        
+        return ipersonaService.findPersona((long)1);
+        
+    }
 
     
     

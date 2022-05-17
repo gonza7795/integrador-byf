@@ -15,16 +15,33 @@ h1, h3 {
 
 
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     #logoutn {
         
-        width: 120%;
+        width: 160%;
         border-radius: 100%;
         box-shadow: 5px 5px 5px grey;
         left: 3%;
         top: 300px;
     }
 }
+
+
+@media  (max-width: 991px) and (min-width: 576px)  {
+    
+    #logoutn {
+        
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 5px 5px 5px grey;
+        left: 3%;
+        top: 300px;
+    }
+
+}
+
+
+
 
 @media (max-width: 575px) {
     #logoutn {
